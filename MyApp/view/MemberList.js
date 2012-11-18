@@ -1,34 +1,58 @@
 Ext.define('MyApp.view.MemberList', {
+
     alias  : 'widget.myapp-member-list',
+
     extend : 'Ext.grid.Panel',
+
+    // 動的ローディング用
     requires : [
         'Ext.grid.plugin.RowEditing',
         'Ext.selection.RowModel',
         'MyApp.view.SectionCombo',
         'MyApp.view.ConditionCombo'
     ],
+
     dockedItems : [{
+
         xtype : 'toolbar',
+
         dock  : 'top',
-        defaults : {
+
+        defaults : { // 下位部品のデフォルトセッティング
             scale : 'medium',
             width : 60,
             xtype : 'button'
         },
-        items : ['->', {
+
+        items : ['->', { // 右寄せ
+
+            // 追加ボタン
             iconCls  : 'icon-add',
+
             action   : 'add',
+
             text     : '追加'
+
         }, {
+
+            // 削除ボタン
             iconCls  : 'icon-delete',
+
             action   : 'delete',
+
             disabled : true,
+
             text     : '削除'
         }]
     }],
+
     frame   : true,
+
+    // 選択モデル
     selType : 'rowmodel',
+
     store   : 'Members',
+
     columns : [{
         dataIndex : 'section',
         header    : '部署',
@@ -72,5 +96,7 @@ Ext.define('MyApp.view.MemberList', {
         editor    : 'textfield',
         flex      : 2
     }],
+
     plugins : [Ext.create('Ext.grid.plugin.RowEditing')]
+
 });

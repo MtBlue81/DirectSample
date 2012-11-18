@@ -11,7 +11,7 @@
          * @remotable
          */
         public function who(){
-            return "I am ". $_SERVER['SERVER_NAME']. "\nYou are ". $_SERVER['REMOTE_ADDR'];
+            return $_SERVER;
         }
     }
 ?>

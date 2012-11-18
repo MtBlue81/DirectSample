@@ -3,6 +3,7 @@ Ext.define('MyApp.controller.Buttons', {
     extend : 'Ext.app.Controller',
 
     views  : ['MemberList'],
+
     refs   : [{
         ref     : 'list',
         selector: 'myapp-member-list'

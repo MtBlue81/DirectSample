@@ -1,5 +1,7 @@
 Ext.define('MyApp.model.Member', {
+
     extend     : 'Ext.data.Model',
+
     fields     : [
         {name: 'section'   , type: 'string', defaultValue: 'その他'},
         {name: 'name'      , type: 'string'},
@@ -10,4 +12,5 @@ Ext.define('MyApp.model.Member', {
         {name: 'birth'     , type: 'date'},
         {name: 'note'      , type: 'string'}
     ]
+
 });

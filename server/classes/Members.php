@@ -2,10 +2,11 @@
 // TODO ちゃんとDBIを使いましょう(^_^;)
 class Members {
     private $link;
-    private $table_name = "test";//"memberlist";
+    private $table_name = "memberlist";
 
     public function __construct() {
-        $this->link = mysql_connect('localhost', 'rdb_user');
+        $this->link = mysql_connect('localhost', 'test', 'test');
+        //$this->link = mysql_connect('localhost', 'rdb_user');
         if (!$this->link) {
             die(mysql_error());
         }

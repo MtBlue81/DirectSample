@@ -1,19 +1,38 @@
 Ext.define('MyApp.view.Footer', {
+
     alias    : 'widget.myapp-footer',
+
     extend   : 'Ext.Panel',
+
     requires : [
        'MyApp.view.EchoBox',
        'MyApp.view.StatusChart'
     ],
-    hideHeaders : true,
-    frame : true,
-    layout: 'hbox',
+
+    frame  : true,
+
+    layout : {
+        type  : 'hbox',
+        align : 'stretch'
+    },
+
     items : [{
-        xtype : 'status-chart',
-        flex  : 1,
-        height: 300
-    }, {
+
         xtype : 'myapp-echobox',
+
+        collapseDirection : 'left',
+
+        collapsible : true,
+
+        collapsed   : true,
+
+        width : 300
+
+    }, {
+
+        xtype : 'status-chart',
+
         flex  : 1
+
     }]
 });

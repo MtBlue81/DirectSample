@@ -5,9 +5,6 @@ Ext.define('MyApp.controller.Footer', {
     views  : ['Footer'],
 
     refs   : [{
-        ref     : 'list',
-        selector: 'myapp-member-list'
-    }, {
         ref     : 'chart',
         selector: 'status-chart'
     }],
@@ -26,8 +23,9 @@ Ext.define('MyApp.controller.Footer', {
                     });
                 },
                 selectionchange : function(sm, sel, opt) {
-                    var me = this;
-                    me.update(sel[0].data);
+                    var me = this,
+                        data = sel[0] ? sel[0].data : {};
+                    me.update(data);
                 }
             }
         });

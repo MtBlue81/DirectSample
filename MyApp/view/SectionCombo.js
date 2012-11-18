@@ -1,12 +1,21 @@
 Ext.define('MyApp.view.SectionCombo', {
+
     alias     : 'widget.section-combo',
+
     extend    : 'Ext.form.ComboBox',
+
     queryMode : 'local',
+
     editable  : false,
+
     valueField    : 'section',
+
     displayField  : 'section',
+
     triggerAction : 'all',
+
     xtype : 'combo',
+
     store : new Ext.data.ArrayStore({
         fields : [
             'section'
