@@ -5,12 +5,12 @@ class Members {
     private $table_name = "memberlist";
 
     public function __construct() {
-        $this->link = mysql_connect('localhost', 'test', 'test');
+        $this->link = mysql_connect('localhost', 'user', 'password');
         //$this->link = mysql_connect('localhost', 'rdb_user');
         if (!$this->link) {
             die(mysql_error());
         }
-        $db_selected = mysql_select_db('sec_db', $this->link);
+        $db_selected = mysql_select_db('test_db', $this->link);
         if (!$db_selected) {
             die(mysql_error());
         }
