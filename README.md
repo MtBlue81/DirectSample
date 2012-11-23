@@ -1,3 +1,3 @@
-#Ext.Direct$BMxMQ%5%s%W%k(B
-$B"-$N%"%W%j:n@.%5%s%W%k(B
-![ScreenShot](https://github.com/MtBlue81/DirectSample/screen_shot.png)
+#Ext.Direct利用サンプル
+↓のアプリ作成サンプル
+![ScreenShot](https://github.com/MtBlue81/DirectSample/blob/master/screen_shot.png)
